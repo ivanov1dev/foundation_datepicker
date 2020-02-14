@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * Implements hook_libraries_info().
+ */
+function foundation_datepicker_libraries_info() {
+  return [
+    'bootstrap-datepicker' => [
+      'name' => 'Bootstrap Date Picker',
+      'vendor url' => 'https://github.com/uxsolutions/bootstrap-datepicker',
+      'download url' => 'https://github.com/uxsolutions/bootstrap-datepicker/archive/master.zip',
+      'version arguments' => array(
+        'file' => 'js/bootstrap-datepicker.min.js',
+        'pattern' => '@(?i:Bootstrap)\sv?([0-9\.a-z]+)@',
+        'lines' => 2,
+      ),
+      'files' => array(
+        'js' => array(
+          'js/bootstrap-datepicker.min.js',
+          'locales/bootstrap-datepicker.ru.min.js',
+        ),
+        'css' => array('css/bootstrap-datepicker3.min.css'),
+      ),
+      'integration files' => array(
+        'foundation_datepicker' => array(
+          'js' => array('js/form-datepicker.js'),
+          'css' => array('css/form-datepicker.css'),
+        ),
+      ),
+    ],
+  ];
+}

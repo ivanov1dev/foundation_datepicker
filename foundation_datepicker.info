@@ -1,0 +1,7 @@
+name = Foundation Bootstrap Date Picker
+description = Foundation Bootstrap Date Picker
+core = 7.x
+package = Foundation
+version = 7.x-1.0
+project = foundation_datepicker
+project path = sites/all/modules/third
